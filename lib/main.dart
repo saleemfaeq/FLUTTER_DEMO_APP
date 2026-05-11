@@ -49,10 +49,10 @@ class SimpleProject extends StatelessWidget {
         ], //notifications IconButton on the right of AppBar
       ),
 
-      // The body of the Scaffold is a Center widget that contains a Text widget
+      // The body of the Scaffold is a Center widget that contains a Text widget 
       body: Center(
         child: Text(
-          'Welcome to Facebook👋',
+          'Welcome to Facebook Lite! 👋',
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,
           color:Color.fromARGB(255, 190, 69, 206)),
         ),
