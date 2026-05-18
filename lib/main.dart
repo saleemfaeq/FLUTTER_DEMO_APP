@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SimpleProject extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 10,
+        elevation: 20,
         title: const Text('Facebook'),
         centerTitle: true,
         leading: IconButton(
@@ -49,13 +49,25 @@ class SimpleProject extends StatelessWidget {
         ], //notifications IconButton on the right of AppBar
       ),
 
-      // The body of the Scaffold is a Center widget that contains a Text widget 
+      // The body of the Scaffold is a Center widget that contains a Text widget
       body: Center(
         child: Text(
           'Welcome to Facebook Lite! 👋',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,
-          color:Color.fromARGB(255, 190, 69, 206)),
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 190, 69, 206),
+          ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color.fromARGB(255, 0, 139, 252),
+        shape: const CircleBorder(),
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ), //add IconButton on the bottom right of the Scaffold
       ),
     );
   }
